@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Forms</title>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .small-input {
+        width: 50%;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
   </head>
   <body>
     <form>
-      <label for="name">First_Name:</label>
-      <input type="text" id="name" First_name="name"><br>
-      <label for="name">Middle_Name:</label>
-      <input type="text" id="name" Middle_name="name"><br>
-      <label for="name">Last_Name:</label>
-      <input type="text" id="name" Last_name="name"><br>
-      
-      <label>E-mail:</label>
-      <input type="text" id="name" E-mail="name"><br>
+      <label for="first_name">First Name:</label>
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        class="small-input"
+      />
+
+      <label for="middle_name">Middle Name:</label>
+      <input
+        type="text"
+        id="middle_name"
+        name="middle_name"
+        class="small-input"
+      />
+
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name" class="small-input" />
+
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" name="email" class="small-input" />
 
       <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="male">
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label><br>
-      <input type="radio" id="Other" name="gender" value="Other">
-      <label for="Other">Other</label><br>
-      
+      <div class="inline-input">
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male" class="inline-label">Male</label>
+      </div>
+      <div class="inline-input">
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female" class="inline-label">Female</label>
+      </div>
+      <div class="inline-input">
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other" class="inline-label">Other</label>
+      </div>
+
       <label>Hobbies:</label>
-      <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+      <input type="checkbox" id="hobby1" name="hobbies" value="reading" />
       <label for="hobby1">Reading</label>
-      <input type="checkbox" id="hobby2" name="hobbies" value="traveling">
-      <label for="hobby2">Traveling</label><br>
-      <input type="checkbox" id="hobby3" name="hobbies" value="gaming">
-      <label for="hobby3">Gaming</label><br>
-      <input type="checkbox" id="hobby4" name="hobbies" value="GYM">
-      <label for="hobby4">GYM</label><br>
-      
-      <label for="comments">Comments:</label><br>
-      <textarea id="comments" name="comments"></textarea><br>
-      
+      <input type="checkbox" id="hobby2" name="hobbies" value="traveling" />
+      <label for="hobby2">Traveling</label>
+      <input type="checkbox" id="hobby3" name="hobbies" value="gaming" />
+      <label for="hobby3">Gaming</label>
+      <input type="checkbox" id="hobby4" name="hobbies" value="gym" />
+      <label for="hobby4">GYM</label>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments"></textarea>
+
       <button type="submit">Submit</button>
     </form>
   </body>

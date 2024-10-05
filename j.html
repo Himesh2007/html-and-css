@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <button id="btn-color">change color</button>
+    <script>
+      //  alert("we are going to change the background color.");
+      let btncolor = document.getElementById("btn-color");
+      btncolor.addEventListener("click", changeBgColor);
+      function changeBgColor() {
+        let bodyElement = document.getElementById("body");
+        let colors = ["blue", "green", "orange", "white", "black"];
+        let randomcolorposition = randomIntFromInterval(0, 4);
+        bodyElement.style.backgroundColor = colors[randomcolorposition];
+      }
+      function randomIntFromInterval(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+    </script>
+  </body>
+</html>

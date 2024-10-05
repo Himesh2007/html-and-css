@@ -1,24 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Unordered List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+      .content {
+        text-align: left;
+        margin-top: 0;
+      }
+      ul {
+        padding: 0;
+        margin: 20px 0;
+      }
+      ul li {
+        margin: 5px 0;
+      }
+      dl {
+        margin: 20px 0;
+      }
+      dt {
+        font-weight: bold;
+      }
+      dd {
+        margin-left: 20px;
+      }
+    </style>
   </head>
   <body>
-    <ul type="disc">
-      <li>Disc item</li>
-      <li>Another disc item</li>
-    </ul>
-    <ul type="circle">
-      <li>Circle item</li>
-      <li>Another circle item</li>
-    </ul>
-    <ul type="square">
-      <li>Square item</li>
-      <li>Another square item</li>
-    </ul>
-    <dl>
-      <dt>HTML</dt>
-      <dd>Hyper Text Markup Language</dd>
-    </dl>
+    <div class="content">
+      <ul class="disc">
+        <li>Disc item</li>
+        <li>Another disc item</li>
+      </ul>
+      <ul class="circle">
+        <li>Circle item</li>
+        <li>Another circle item</li>
+      </ul>
+      <ul class="square">
+        <li>Square item</li>
+        <li>Another square item</li>
+      </ul>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markup Language</dd>
+      </dl>
+    </div>
   </body>
 </html>
